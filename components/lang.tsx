@@ -55,4 +55,4 @@ export function T({ fr, en }: { fr: ReactNode; en: ReactNode }) {
 }
 
 /** Script exécuté avant l'hydratation pour éviter un flash de la mauvaise langue. */
-export const langBootScript = `try{if(localStorage.getItem('${STORAGE_KEY}')==='en'){var r=document.documentElement;r.classList.remove('fr-on');r.classList.add('en-on');r.lang='en';}}catch(e){}`;
+export const langBootScript = `(function(){var r=document.documentElement;try{if(localStorage.getItem('${STORAGE_KEY}')==='en'){r.classList.remove('fr-on');r.classList.add('en-on');r.lang='en';}}catch(e){}try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window)r.classList.add('reveal-on');}catch(e){}})();`;

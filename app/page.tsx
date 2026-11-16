@@ -1,6 +1,8 @@
 import LiveBoard from "@/components/LiveBoard";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
+import CvModal from "@/components/CvModal";
+import ScrollReveal from "@/components/ScrollReveal";
 import { T } from "@/components/lang";
 import { AnimPause, CopyEmail, CountUp, DeployLog, TypingWord } from "@/components/widgets";
 
@@ -59,6 +61,7 @@ export default function Home() {
                 </p>
                 <div className="cta">
                   <a className="btn main" href="#projets"><T fr="Voir les projets" en="See the projects" /></a>
+                  <a className="btn" href="#cv"><T fr="Voir mon CV" en="View my résumé" /></a>
                   <a className="btn" href="#contact"><T fr="Me contacter" en="Contact me" /></a>
                   <a className="btn" href="https://github.com/ced08stark" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
@@ -234,6 +237,10 @@ export default function Home() {
                 <a href="https://linkedin.com/in/cedric-kaze-ngangue-803955243" target="_blank" rel="noopener noreferrer">cedric-kaze-ngangue</a>
               </div>
               <div className="crow">
+                <span>CV</span>
+                <a href="#cv"><T fr="Consulter le CV (FR ou EN)" en="View the résumé (FR or EN)" /></a>
+              </div>
+              <div className="crow">
                 <span>GitHub</span>
                 <a href="https://github.com/ced08stark" target="_blank" rel="noopener noreferrer">ced08stark</a>
               </div>
@@ -246,7 +253,9 @@ export default function Home() {
         <span>Cédric Kaze Ngangue · Montréal</span>
         <T fr="Mis à jour en novembre 2026" en="Updated November 2026" />
       </footer>
+      <CvModal />
       <AnimPause />
+      <ScrollReveal />
     </>
   );
 }
