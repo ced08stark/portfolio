@@ -17,7 +17,7 @@ export default function Nav() {
           <a href="#competences"><T fr="Compétences" en="Skills" /></a>
           <a href="#parcours"><T fr="Parcours" en="Background" /></a>
           <a href="#contact">Contact</a>
-          <a className="cv-btn" href="#cv"><T fr="Mon CV" en="My résumé" /></a>
+          <a className="cv-btn" href="#cv" data-cv-source="nav"><T fr="Mon CV" en="My résumé" /></a>
           <div className="lang" role="group" aria-label="Langue / Language">
             <button type="button" aria-pressed={lang === "fr"} onClick={() => setLang("fr")}>FR</button>
             <button type="button" aria-pressed={lang === "en"} onClick={() => setLang("en")}>EN</button>

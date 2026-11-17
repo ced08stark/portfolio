@@ -128,7 +128,7 @@ export default function Projects() {
             ]}
           />
           <Stack items={["Next.js", "Node.js", "NestJS", "MongoDB", "React Native", "Docker"]} />
-          <a className="visit" href="https://objectifcanada-tcf.com" target="_blank" rel="noopener noreferrer">
+          <a className="visit" data-track="project-link" data-track-project="objectif-canada" href="https://objectifcanada-tcf.com" target="_blank" rel="noopener noreferrer">
             <T fr="Visiter objectifcanada-tcf.com" en="Visit objectifcanada-tcf.com" />
           </a>
         </div>
@@ -240,7 +240,7 @@ export default function Projects() {
             ]}
           />
           <Stack items={["NestJS", "Socket.IO", "Redis", "Prisma", "MongoDB", "Next.js"]} />
-          <a className="visit" href="https://dicegame.k-tika.com" target="_blank" rel="noopener noreferrer">
+          <a className="visit" data-track="project-link" data-track-project="dice-game" href="https://dicegame.k-tika.com" target="_blank" rel="noopener noreferrer">
             <T fr="Visiter dicegame.k-tika.com" en="Visit dicegame.k-tika.com" />
           </a>
         </div>
@@ -514,7 +514,7 @@ function Tile(props: {
         <p className="en">{props.en}</p>
         <Stack items={props.stack} />
         {props.link && (
-          <a href={props.link.href} target="_blank" rel="noopener noreferrer">
+          <a data-track="project-link" data-track-project={props.link.label} href={props.link.href} target="_blank" rel="noopener noreferrer">
             {props.link.label}
           </a>
         )}

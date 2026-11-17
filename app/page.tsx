@@ -61,9 +61,9 @@ export default function Home() {
                 </p>
                 <div className="cta">
                   <a className="btn main" href="#projets"><T fr="Voir les projets" en="See the projects" /></a>
-                  <a className="btn" href="#cv"><T fr="Voir mon CV" en="View my résumé" /></a>
+                  <a className="btn" href="#cv" data-cv-source="hero"><T fr="Voir mon CV" en="View my résumé" /></a>
                   <a className="btn" href="#contact"><T fr="Me contacter" en="Contact me" /></a>
-                  <a className="btn" href="https://github.com/ced08stark" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a className="btn" data-track="contact" data-track-channel="github" href="https://github.com/ced08stark" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
               </div>
               <LiveBoard />
@@ -224,25 +224,25 @@ export default function Home() {
               <div className="crow">
                 <span><T fr="Courriel" en="Email" /></span>
                 <span>
-                  <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+                  <a href={`mailto:${EMAIL}`} data-track="contact" data-track-channel="email">{EMAIL}</a>
                   <CopyEmail email={EMAIL} />
                 </span>
               </div>
               <div className="crow">
                 <span><T fr="Téléphone" en="Phone" /></span>
-                <span><a href="tel:+14384024380">+1 438-402-4380</a></span>
+                <span><a href="tel:+14384024380" data-track="contact" data-track-channel="phone">+1 438-402-4380</a></span>
               </div>
               <div className="crow">
                 <span>LinkedIn</span>
-                <a href="https://linkedin.com/in/cedric-kaze-ngangue-803955243" target="_blank" rel="noopener noreferrer">cedric-kaze-ngangue</a>
+                <a data-track="contact" data-track-channel="linkedin" href="https://linkedin.com/in/cedric-kaze-ngangue-803955243" target="_blank" rel="noopener noreferrer">cedric-kaze-ngangue</a>
               </div>
               <div className="crow">
                 <span>CV</span>
-                <a href="#cv"><T fr="Consulter le CV (FR ou EN)" en="View the résumé (FR or EN)" /></a>
+                <a href="#cv" data-cv-source="contact"><T fr="Consulter le CV (FR ou EN)" en="View the résumé (FR or EN)" /></a>
               </div>
               <div className="crow">
                 <span>GitHub</span>
-                <a href="https://github.com/ced08stark" target="_blank" rel="noopener noreferrer">ced08stark</a>
+                <a data-track="contact" data-track-channel="github" href="https://github.com/ced08stark" target="_blank" rel="noopener noreferrer">ced08stark</a>
               </div>
             </div>
           </section>

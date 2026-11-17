@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { track } from "./analytics";
 import { formatNumber, useReducedMotion } from "./hooks";
 import { T, useLang } from "./lang";
 
@@ -202,6 +203,7 @@ export function CopyEmail({ email }: { email: string }) {
     return () => clearTimeout(id);
   }, [state]);
   const copy = () => {
+    track("email-copy");
     try {
       navigator.clipboard.writeText(email).then(
         () => setState("ok"),

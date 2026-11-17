@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "./analytics";
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 
 export type Lang = "fr" | "en";
@@ -30,6 +31,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setLang = useCallback((l: Lang) => {
+    track("lang-switch", { lang: l });
     applyLang(l);
     setLangState(l);
     try {

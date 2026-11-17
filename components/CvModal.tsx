@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import CvContent from "./CvContent";
+import { track } from "./analytics";
 import { T } from "./lang";
 
 /**
@@ -25,15 +26,27 @@ export default function CvModal() {
   }, []);
 
   useEffect(() => {
+    // Mémorise quel lien a ouvert le CV (nav, hero, contact) pour les statistiques.
+    let source = "direct";
+    const onClick = (e: MouseEvent) => {
+      const el = (e.target as HTMLElement).closest<HTMLElement>("[data-cv-source]");
+      if (el) source = el.dataset.cvSource || "link";
+    };
     const sync = () => {
       if (location.hash === "#cv") {
         lastFocus.current = document.activeElement as HTMLElement | null;
         setOpen(true);
+        track("cv-open", { source });
+        source = "direct";
       } else setOpen(false);
     };
     sync();
+    document.addEventListener("click", onClick, true);
     window.addEventListener("hashchange", sync);
-    return () => window.removeEventListener("hashchange", sync);
+    return () => {
+      document.removeEventListener("click", onClick, true);
+      window.removeEventListener("hashchange", sync);
+    };
   }, []);
 
   useEffect(() => {
@@ -68,10 +81,10 @@ export default function CvModal() {
           <span className="t" id="cv-label">
             <T fr="CV de Cédric Kaze Ngangue" en="Cédric Kaze Ngangue's résumé" />
           </span>
-          <a className="btn main fr" href="/cv/CV_Cedric_Kaze_Ngangue_FR.pdf" target="_blank" rel="noopener" download>
+          <a className="btn main fr" data-track="cv-download" data-track-lang="fr" href="/cv/CV_Cedric_Kaze_Ngangue_FR.pdf" target="_blank" rel="noopener" download>
             Télécharger le PDF
           </a>
-          <a className="btn main en" href="/cv/CV_Cedric_Kaze_Ngangue_EN.pdf" target="_blank" rel="noopener" download>
+          <a className="btn main en" data-track="cv-download" data-track-lang="en" href="/cv/CV_Cedric_Kaze_Ngangue_EN.pdf" target="_blank" rel="noopener" download>
             Download PDF
           </a>
           <button ref={closeRef} className="btn" type="button" onClick={close}>
