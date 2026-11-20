@@ -9,7 +9,7 @@ import { AnimPause, CopyEmail, CountUp, DeployLog, TypingWord } from "@/componen
 const EMAIL = "cedricngangue08@gmail.com";
 
 const SKILLS_MARQUEE = [
-  "TypeScript", "React", "Next.js", "Node.js", "NestJS", "React Native", "Expo", "Socket.IO",
+  "TypeScript", "React", "Next.js", "Node.js", "NestJS", "Laravel", "LDAP", "Ethereum", "React Native", "Expo", "Socket.IO",
   "Redis", "MongoDB", "Prisma", "Docker", "CI/CD", "Coolify", "AWS", "LLM APIs",
 ];
 
@@ -145,8 +145,8 @@ export default function Home() {
 
           {/* PARCOURS */}
           <section className="sec" id="parcours">
-            <h2 className="fr">Quatre ans en poste, deux diplômes en cours du soir</h2>
-            <h2 className="en">Four years on the job, two degrees in evening classes</h2>
+            <h2 className="fr">Cinq ans d&apos;expérience, deux diplômes en cours du soir</h2>
+            <h2 className="en">Five years of experience, two degrees in evening classes</h2>
             <div className="path">
               <div className="step">
                 <div className="when"><T fr="févr. 2025 – nov. 2026" en="Feb 2025 – Nov 2026" /></div>
@@ -179,6 +179,22 @@ export default function Home() {
                   <ul className="en">
                     <li>TypeScript APIs and admin interfaces: customer loyalty (wallet, points, QR code), online training</li>
                     <li>Application deployment and administration, technical documentation</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="step">
+                <div className="when"><T fr="sept. 2021 – août 2022" en="Sep 2021 – Aug 2022" /></div>
+                <div>
+                  <h3 className="fr">Développeur full-stack junior (stage professionnel)</h3>
+                  <h3 className="en">Junior Full-Stack Developer (professional internship)</h3>
+                  <p className="org">E-Workspace, Douala · <T fr="1 an" en="1 year" /></p>
+                  <ul className="fr">
+                    <li>Gestionnaire d&apos;applications basé sur l&apos;annuaire LDAP de l&apos;entreprise, en React et Laravel</li>
+                    <li>Authentification centralisée et gestion des accès aux applications par utilisateur et par groupe</li>
+                  </ul>
+                  <ul className="en">
+                    <li>Application manager based on the company&apos;s LDAP directory, with React and Laravel</li>
+                    <li>Centralized authentication and application access management by user and group</li>
                   </ul>
                 </div>
               </div>

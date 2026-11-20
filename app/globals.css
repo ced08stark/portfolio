@@ -314,6 +314,23 @@ html.en-on .fr { display: none !important; }
 .copy { border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 700 12px var(--body); padding: 4px 10px; border-radius: 8px; cursor: pointer; margin-left: 8px; }
 footer { padding: 36px 0 48px; color: var(--fog); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
+/* Certification blockchain */
+.chainscene { padding: 26px; display: grid; gap: 22px; align-content: center; }
+.diploma { background: #f7f4ea; color: #1b2440; border-radius: 12px; padding: 18px 20px; position: relative; box-shadow: 0 16px 40px -18px rgba(0,0,0,.6); max-width: 360px; }
+.diploma .dt { font: 700 15px var(--display); letter-spacing: -0.01em; }
+.diploma .dn { font-size: 13px; color: #4a5470; margin-top: 4px; }
+.diploma .hash { margin-top: 12px; font: 400 11px var(--mono); color: #4a5470; word-break: break-all; }
+.seal { position: absolute; right: 16px; top: 16px; width: 46px; height: 46px; border-radius: 50%; border: 3px solid var(--mint); color: var(--mint); display: grid; place-items: center; font-weight: 800; font-size: 20px; background: #f7f4ea; animation: seal 6s infinite; }
+@keyframes seal { 0%, 55% { transform: scale(0.4); opacity: 0; } 62% { transform: scale(1.15); opacity: 1; } 68%, 92% { transform: scale(1); opacity: 1; } 100% { opacity: 0; } }
+.blocks { display: flex; align-items: center; gap: 0; }
+.blk { width: 64px; height: 50px; border-radius: 10px; background: var(--ink); border: 1px solid var(--line); display: grid; place-items: center; font: 500 11px var(--mono); color: var(--fog); flex: none; }
+.blk.new { animation: blk 6s infinite; }
+@keyframes blk { 0%, 20% { opacity: 0; transform: translateX(-14px); } 32%, 92% { opacity: 1; transform: none; border-color: var(--momo); color: var(--momo); } 100% { opacity: 0; } }
+.blocks .link { width: 26px; height: 2px; background: var(--line); flex: none; }
+.verify { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--fog); }
+.verify b { color: var(--mint); animation: vfy 6s infinite; }
+@keyframes vfy { 0%, 60% { opacity: 0.25; } 66%, 92% { opacity: 1; } 100% { opacity: .25; } }
+
 /* Apparition au défilement
    La classe reveal-on est posée sur <html> avant l'affichage (JS actif et animations autorisées).
    ScrollReveal ajoute data-shown quand l'élément entre à l'écran. */

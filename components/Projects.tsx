@@ -12,6 +12,7 @@ const FILTERS: { f: string; fr: string; en: string }[] = [
   { f: "mobile", fr: "Mobile", en: "Mobile" },
   { f: "web", fr: "Web", en: "Web" },
   { f: "devops", fr: "DevOps", en: "DevOps" },
+  { f: "blockchain", fr: "Blockchain", en: "Blockchain" },
 ];
 
 function Stack({ items }: { items: string[] }) {
@@ -52,8 +53,8 @@ export default function Projects() {
     <section className="sec" id="projets">
       <h2 className="fr">Des produits en ligne, utilisés tous les jours</h2>
       <h2 className="en">Live products, used every day</h2>
-      <p className="intro fr">Neuf projets sur lesquels j&apos;ai codé, de l&apos;API à la publication. Filtrez par domaine.</p>
-      <p className="intro en">Nine projects I&apos;ve coded on, from the API to release. Filter by area.</p>
+      <p className="intro fr">Dix projets sur lesquels j&apos;ai codé, de l&apos;API à la publication. Filtrez par domaine.</p>
+      <p className="intro en">Ten projects I&apos;ve coded on, from the API to release. Filter by area.</p>
 
       <div className="filters" role="group" aria-label="Filtrer les projets">
         {FILTERS.map((c) => (
@@ -243,6 +244,55 @@ export default function Projects() {
           <a className="visit" data-track="project-link" data-track-project="dice-game" href="https://dicegame.k-tika.com" target="_blank" rel="noopener noreferrer">
             <T fr="Visiter dicegame.k-tika.com" en="Visit dicegame.k-tika.com" />
           </a>
+        </div>
+      </article>
+
+      {/* Certification blockchain */}
+      <article className={cls("big flip proj", "web blockchain")}>
+        <div className="scene chainscene anim" aria-hidden="true">
+          <div className="diploma">
+            <div className="dt fr">Diplôme de master</div>
+            <div className="dt en">Master&apos;s diploma</div>
+            <div className="dn fr">Génie logiciel · Mention Bien</div>
+            <div className="dn en">Software engineering · Honours</div>
+            <div className="hash">0x7f3a…c91e · bloc #1 284 503</div>
+            <span className="seal">✓</span>
+          </div>
+          <div className="blocks">
+            <span className="blk">#501</span>
+            <span className="link" />
+            <span className="blk">#502</span>
+            <span className="link" />
+            <span className="blk new">#503</span>
+          </div>
+          <div className="verify">
+            <T fr="Vérification de l'authenticité :" en="Authenticity check:" />{" "}
+            <b>
+              <T fr="diplôme authentique" en="diploma verified" />
+            </b>
+          </div>
+        </div>
+        <div>
+          <span className="status done">
+            <T fr="Projet de mémoire · 17/20" en="Master's thesis project · 17/20" />
+          </span>
+          <h3 className="fr">Certification académique sur blockchain</h3>
+          <h3 className="en">Blockchain academic certification</h3>
+          <p className="what fr">Application qui enregistre les diplômes sur la blockchain Ethereum pour que n&apos;importe qui puisse en vérifier l&apos;authenticité. Réalisée chez E-Workspace et présentée comme mémoire de master.</p>
+          <p className="what en">Application that records diplomas on the Ethereum blockchain so anyone can verify they are authentic. Built at E-Workspace and presented as my master&apos;s thesis.</p>
+          <Points
+            fr={[
+              "Émission des certificats académiques et enregistrement de leur empreinte sur Ethereum",
+              "Vérification de l'authenticité d'un diplôme par un employeur ou une institution",
+              "Mémoire de master noté 17/20 (mention Excellent)",
+            ]}
+            en={[
+              "Issues academic certificates and records their fingerprint on Ethereum",
+              "Lets an employer or institution verify that a diploma is authentic",
+              "Master's thesis graded 17/20 (Excellent)",
+            ]}
+          />
+          <Stack items={["Ethereum", "Next.js", "Laravel", "PHP"]} />
         </div>
       </article>
 

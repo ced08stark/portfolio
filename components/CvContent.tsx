@@ -32,15 +32,16 @@ const FR: Cv = {
   status: "Résident permanent du Canada · Disponible immédiatement",
   h: { profile: "Profil", skills: "Compétences", xp: "Expérience professionnelle", projects: "Projets en ligne", edu: "Formation", lang: "Langues", certs: "Certifications" },
   profile:
-    "Développeur full-stack titulaire d’un master professionnel en systèmes d’information et génie logiciel, avec plus de 4 ans d’expérience en conception, développement et maintenance d’applications web et mobiles en production. Mes applications servent plus de 26 000 utilisateurs, encaissent des paiements mobile money dans plusieurs pays africains et corrigent des examens avec des agents IA. À l’aise de l’API jusqu’au tableau de bord d’administration, avec TypeScript, React, Node.js et React Native, et déploie ses applications de bout en bout (Docker, CI/CD, VPS sur AWS, DigitalOcean et Hetzner, Coolify). Récemment installé à Montréal, à la recherche d’un poste de développeur logiciel.",
+    "Développeur full-stack titulaire d’un master professionnel en systèmes d’information et génie logiciel, avec plus de 5 ans d’expérience en conception, développement et maintenance d’applications web et mobiles en production. Mes applications servent plus de 26 000 utilisateurs, encaissent des paiements mobile money dans plusieurs pays africains et corrigent des examens avec des agents IA. À l’aise de l’API jusqu’au tableau de bord d’administration, avec TypeScript, React, Node.js et React Native, et déploie ses applications de bout en bout (Docker, CI/CD, VPS sur AWS, DigitalOcean et Hetzner, Coolify). Récemment installé à Montréal, à la recherche d’un poste de développeur logiciel.",
   skills: [
     ["Langages", "TypeScript, JavaScript, PHP, C#, SQL"],
     ["Front-end", "React, Next.js, Tailwind CSS, Framer Motion, HTML, CSS, conception web adaptative, référencement technique (SEO)"],
     ["Mobile", "React Native, Expo et EAS (Android et iOS), mode hors ligne, mises à jour OTA"],
-    ["Back-end et données", "Node.js, NestJS, Express, MongoDB, Prisma, Redis, Socket.IO (temps réel), conception d’API documentées (Swagger), validation Zod, sessions sécurisées (iron-session)"],
+    ["Back-end et données", "Node.js, NestJS, Express, Laravel (PHP), MongoDB, Prisma, Redis, Socket.IO (temps réel), conception d’API documentées (Swagger), validation Zod, sessions sécurisées (iron-session), authentification LDAP"],
     ["Paiements", "mobile money (Campay, Swychr, PawaPay), requêtes signées, webhooks idempotents, gestion des abonnements"],
     ["DevOps et administration système", "Docker, CI/CD (GitHub Actions), monorepo Turborepo, conception, déploiement et administration de serveurs VPS en production (AWS, DigitalOcean, Hetzner), Coolify, serveurs de secours"],
     ["Qualité et méthodes", "tests automatisés, environnements de test et de production, Git, Agile (sprints de 2 semaines), documentation technique"],
+    ["Blockchain", "Ethereum, certification et vérification de documents académiques"],
     ["IA", "agents IA (pré-correction d’examens avec relecture humaine, examinateur oral en direct), bascule entre fournisseurs (OpenAI, Gemini, DeepSeek), transcription audio (Whisper), notifications push (Firebase), automatisation de workflows"],
   ],
   jobs: [
@@ -81,16 +82,34 @@ const FR: Cv = {
         "Développement d’API et d’interfaces d’administration en TypeScript : système de fidélisation client (porte-monnaie électronique, points, QR code) et plateforme de formation en ligne",
         "Responsable de la conception, du déploiement et de l’administration système des applications : serveurs VPS, Docker, CI/CD, environnements de développement, de test et de production, documentation technique",
         "Collaboration avec les équipes internes pour l’intégration des solutions et le suivi de projet (planification, reporting)",
+        "Application de certification académique basée sur la blockchain Ethereum : enregistrement des diplômes pour en vérifier l’authenticité (Next.js, Laravel) ; projet présenté comme mémoire de master, noté 17/20",
         "Présentation d’applications à des partenaires lors d’un forum professionnel de l’innovation numérique",
         "Licence et master suivis en cours du soir, en parallèle de l’emploi à temps plein",
       ],
     },
+    {
+      title: "Développeur full-stack junior (stage professionnel) — E-Workspace",
+      meta: (
+        <>
+          Sept. 2021 – août 2022 · Douala, Cameroun
+          <br />
+          Entreprise de services numériques : développement web et mobile, archivage numérique (GED), Douala
+        </>
+      ),
+      points: [
+        "Conception et développement d’un gestionnaire d’applications basé sur l’annuaire LDAP de l’entreprise, en React et Laravel",
+        "Authentification centralisée : les employés se connectent aux applications internes avec leurs identifiants de l’annuaire",
+        "Gestion des accès aux applications selon les utilisateurs et les groupes de l’annuaire, depuis une interface d’administration",
+        "Participation à tout le cycle du projet : analyse des besoins, conception, développement, tests et mise en service",
+      ],
+    },
   ],
   projects: [
-    ["Portfolio", <>9 projets présentés en études de cas : <A href={PORTFOLIO} /></>],
+    ["Portfolio", <>10 projets présentés en études de cas : <A href={PORTFOLIO} /></>],
     ["Objectif Canada", <>plateforme de préparation au TCF, TEF et IELTS (web, applications mobiles, tableau de bord d’administration, correction par IA) : <A href="https://objectifcanada-tcf.com" /></>],
     ["Dice Game", <>plateforme de jeu multijoueur en temps réel, avec comptes utilisateurs, solde et historique des transactions : <A href="https://dicegame.k-tika.com" /></>],
     ["Khonamis Game", <>jeu de football virtuel multijoueur : <A href="https://khonamis.k-tika.com" /></>],
+    ["Certification académique sur blockchain", "application de vérification de diplômes sur Ethereum (Next.js, Laravel), réalisée chez E-Workspace et présentée comme mémoire de master"],
     ["Site FBC-VTI", "site d’un institut de formation professionnelle et de langues au Cameroun : Next.js 15, 60 pages générées, 40 spécialités, formulaires validés (Zod), animations (Framer Motion), référencement technique"],
   ],
   degrees: [
@@ -99,7 +118,7 @@ const FR: Cv = {
       meta: "2023 – 2025 · Mention Bien (B+)",
       points: [
         "Cours clés : cloud computing, programmation distribuée, tests et qualité logicielle, business intelligence, programmation web mobile multiplateforme",
-        "Mémoire de fin d’études noté 17/20",
+        "Mémoire de fin d’études noté 17/20 : application de certification académique basée sur la blockchain Ethereum",
       ],
     },
     {
@@ -124,15 +143,16 @@ const EN: Cv = {
   status: "Permanent Resident of Canada · Available immediately",
   h: { profile: "Profile", skills: "Skills", xp: "Professional experience", projects: "Online projects", edu: "Education", lang: "Languages", certs: "Certifications" },
   profile:
-    "Full-stack developer with a professional master’s degree in information systems and software engineering and over 4 years of experience designing, building and maintaining production web and mobile applications. My applications serve more than 26,000 users, collect mobile money payments across several African countries and grade exams with AI agents. Comfortable from the API to the admin dashboard, with TypeScript, React, Node.js and React Native, and deploys applications end to end (Docker, CI/CD, VPS on AWS, DigitalOcean and Hetzner, Coolify). Recently settled in Montréal and looking for a software developer position.",
+    "Full-stack developer with a professional master’s degree in information systems and software engineering and over 5 years of experience designing, building and maintaining production web and mobile applications. My applications serve more than 26,000 users, collect mobile money payments across several African countries and grade exams with AI agents. Comfortable from the API to the admin dashboard, with TypeScript, React, Node.js and React Native, and deploys applications end to end (Docker, CI/CD, VPS on AWS, DigitalOcean and Hetzner, Coolify). Recently settled in Montréal and looking for a software developer position.",
   skills: [
     ["Languages", "TypeScript, JavaScript, PHP, C#, SQL"],
     ["Front-end", "React, Next.js, Tailwind CSS, Framer Motion, HTML, CSS, responsive web design, technical SEO"],
     ["Mobile", "React Native, Expo and EAS (Android and iOS), offline mode, OTA updates"],
-    ["Back-end and data", "Node.js, NestJS, Express, MongoDB, Prisma, Redis, Socket.IO (real time), documented API design (Swagger), Zod validation, secure sessions (iron-session)"],
+    ["Back-end and data", "Node.js, NestJS, Express, Laravel (PHP), MongoDB, Prisma, Redis, Socket.IO (real time), documented API design (Swagger), Zod validation, secure sessions (iron-session), LDAP authentication"],
     ["Payments", "mobile money (Campay, Swychr, PawaPay), signed requests, idempotent webhooks, subscription management"],
     ["DevOps and system administration", "Docker, CI/CD (GitHub Actions), Turborepo monorepo, design, deployment and administration of production VPS servers (AWS, DigitalOcean, Hetzner), Coolify, backup servers"],
     ["Quality and methods", "automated testing, test and production environments, Git, Agile (2-week sprints), technical documentation"],
+    ["Blockchain", "Ethereum, issuance and verification of academic credentials"],
     ["AI", "AI agents (exam pre-grading with human review, live oral examiner), provider fallback (OpenAI, Gemini, DeepSeek), speech transcription (Whisper), push notifications (Firebase), workflow automation"],
   ],
   jobs: [
@@ -173,16 +193,34 @@ const EN: Cv = {
         "Built TypeScript APIs and admin interfaces: a customer loyalty system (e-wallet, points, QR code) and an online training platform",
         "Responsible for design, deployment and system administration of applications: VPS servers, Docker, CI/CD, development, test and production environments, technical documentation",
         "Worked with internal teams on solution integration and project tracking (planning, reporting)",
+        "Academic certification application built on the Ethereum blockchain: diplomas recorded so their authenticity can be verified (Next.js, Laravel); presented as my master’s thesis, graded 17/20",
         "Presented applications to partners at a professional digital innovation forum",
         "Completed bachelor’s and master’s studies in evening classes while working full-time",
       ],
     },
+    {
+      title: "Junior Full-Stack Developer (professional internship) — E-Workspace",
+      meta: (
+        <>
+          Sep 2021 – Aug 2022 · Douala, Cameroon
+          <br />
+          Digital services company: web and mobile development, digital archiving (EDMS), Douala
+        </>
+      ),
+      points: [
+        "Designed and built an application manager based on the company’s LDAP directory, with React and Laravel",
+        "Centralized authentication: employees sign in to internal applications with their directory credentials",
+        "Access management to applications by directory users and groups, from an admin interface",
+        "Took part in the full project cycle: requirements analysis, design, development, testing and rollout",
+      ],
+    },
   ],
   projects: [
-    ["Portfolio", <>9 projects presented as case studies: <A href={PORTFOLIO} /></>],
+    ["Portfolio", <>10 projects presented as case studies: <A href={PORTFOLIO} /></>],
     ["Objectif Canada", <>TCF, TEF and IELTS preparation platform (web, mobile apps, admin dashboard, AI grading): <A href="https://objectifcanada-tcf.com" /></>],
     ["Dice Game", <>real-time multiplayer gaming platform with user accounts, balance and transaction history: <A href="https://dicegame.k-tika.com" /></>],
     ["Khonamis Game", <>multiplayer virtual football game: <A href="https://khonamis.k-tika.com" /></>],
+    ["Blockchain academic certification", "diploma verification application on Ethereum (Next.js, Laravel), built at E-Workspace and presented as my master’s thesis"],
     ["FBC-VTI website", "website for a vocational and language training institute in Cameroon: Next.js 15, 60 generated pages, 40 programs, validated forms (Zod), animations (Framer Motion), technical SEO"],
   ],
   degrees: [
@@ -191,7 +229,7 @@ const EN: Cv = {
       meta: "2023 – 2025 · Honours (B+)",
       points: [
         "Key courses: cloud computing, distributed programming, software testing and quality, business intelligence, cross-platform mobile web programming",
-        "Final thesis graded 17/20",
+        "Final thesis graded 17/20: academic certification application built on the Ethereum blockchain",
       ],
     },
     {
